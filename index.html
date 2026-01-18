@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>See Under the Bridge</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #000;
+  color: white;
+}
+button {
+  padding: 40px 80px;
+  font-size: 36px;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  margin-top: 30px;
+  transition: transform 0.2s;
+}
+button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+h1 {
+  font-size: 48px;
+  margin-top: 20px;
+}
+#images {
+  display: none;
+  margin-top: 20px;
+  width: 100%;
+}
+#images img {
+  width: 24%;
+  height: auto;
+  margin: 0 1%;
+  display: inline-block;
+  vertical-align: top;
+}
+#gif-container {
+  position: relative;
+  display: inline-block;
+  width: 24%;
+  margin: 0 1%;
+  vertical-align: top;
+}
+#gif-container img {
+  width: 100%;
+  height: auto;
+}
+#emojis {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36px;
+  pointer-events: none;
+  animation: float 2s infinite alternate;
+}
+@keyframes float {
+  0% { transform: translate(-50%, 0); }
+  100% { transform: translate(-50%, -20px); }
+}
+</style>
+</head>
+<body>
+
+<h1>Click the button 👀</h1>
+
+<button id="revealBtn" onclick="showImages()">See under the bridge</button>
+
+<div id="images">
+  <img src="heck.jpg" alt="Image 1">
+  <img src="heck2.jpg" alt="Image 2">
+  <div id="gif-container">
+    <div id="emojis">💖😘💞</div>
+    <img src="heck4.gif" alt="GIF">
+  </div>
+</div>
+
+<audio id="song" src="song.mp3"></audio>
+
+<script>
+function showImages() {
+  document.getElementById("images").style.display = "block";
+  document.querySelector("h1").textContent = "ASARU 🔥🔥🔥🔥🔥";
+  document.getElementById("revealBtn").style.display = "none";
+  document.getElementById("song").play();
+}
+</script>
+
+</body>
+</html>
